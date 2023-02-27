@@ -1,0 +1,35 @@
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8  offset-lg-2">
+            <h3 class="mt-5">Live Camera</h3>
+            <img src="{{ url_for('video_feed') }}" width="50%" height="75%">
+            <form method="post" id="todo-form">
+              <button type="submit">submit</button>
+            </form>
+            
+        </div>
+    </div>
+</div>
+
+  <!--Jquery Cdn -->
+<script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+$(document).on('submit','#todo-form',function(e)
+             {
+console.log('hello');
+e.preventDefault();
+$.ajax({
+  type:'POST',
+  url:'/',
+  data:{
+    
+  },
+})
+});
+</script>
+  </script>
+</body>
