@@ -17,7 +17,7 @@ def generateFrames():
             yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + open('place.jpg', 'rb').read() + b'\r\n')
 
 @main.route('/', methods = ['POST'])
-def input(): #This is ran every frame, we will check if a file has been edited. Then can go from there.
+def input():
     if request.method == "POST":
         print("DO SOMETHING")
     return render_template("index.html")
